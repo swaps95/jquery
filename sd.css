@@ -1,0 +1,23 @@
+.slider{
+	position: relative;
+	margin: auto;
+	width: 700px;
+	display: table;
+	overflow: hidden;
+}
+
+
+.sliderrunner{
+	position: relative;
+	display: table;
+}
+
+
+.slidepart{
+	width: 25%;
+	float: left;
+}
+
+.slidepart img{
+	width:100%;
+}
