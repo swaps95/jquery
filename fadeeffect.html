@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+  	
+  </title>
+       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <style>
+		.sliderrunner{
+  	  width:100%;
+			clear: both;
+			height: 500px;
+  	}
+		.box{
+			width: 0px;
+			height:500px;
+			background: white;
+			float: left;
+			overflow: hidden;
+			background-image: url(photographer-3672010_1280.jpg);
+    
+		}
+	</style>
+	
+</head>
+
+<body>
+		<button id="animates">animate</button>
+		<div class="sliderrunner">
+		  <div class="slidepart1 box">Swap</div>
+		  <div class="slidepart2 box">nil</div>
+		  <div class="slidepart3 box">s</div>
+		</div>	
+
+	<script>
+		$("#animates").click(function() {
+				$(".slidepart1").animate({width: '33%'},500);
+				$(".slidepart2").animate({width: '33%'},1500);
+				$(".slidepart3").animate({width: '33%'},2000);
+	
+     });	
+	</script>
+</body>
+</html>
+
+		

@@ -7,9 +7,6 @@ $('document').ready(function(){
 	
 	$('.sliderrunner').css("width",(slidelen*100)+'%')
 	
-
-	
-	
 	function runnslide(){
 		
 		if(count<(slidelen-1)){
@@ -17,9 +14,9 @@ $('document').ready(function(){
 			count=count+1;
 	 }
 	
-	else{
+	else {
 			$('.sliderrunner').stop().animate({left:"0%"},1500)
-	count=0
+	    count=0;
 }
 		}	
 	

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Slider</title>
+<script src="http://code.jquery.com/jquery-1.8.3.min.js" type="text/javascript"></script>
+</head>
+<body>
+    
+
+<div class="slider">
+    <div class="sliderrunner">
+        <div class="slidepart"><img src="a.jpg"></div>
+        <div class="slidepart"><img src="a.jpg"></div>
+        <div class="slidepart"><img src="a.jpg"></div>
+    </div>
+</div>
+
+
+<style>
+
+.slider
+{
+    position: relative;
+    margin: auto;
+    width: 800px;
+    /* display: table; */
+    overflow: hidden;
+}
+
+.sliderrunner
+{
+    position: relative;
+}
+.slidepart
+{
+    float: left;
+}
+.slidepart img
+{
+    width: 100%;
+}
+</style>
+
+
+<script>
+$('document').ready(function(){
+var runner;
+var count=1;
+var slplen=$('.slidepart').length;
+$('.sliderrunner').css("width",slplen*100+"%")
+$('.slidepart').css("width",100/slplen+"%")
+function runfun(){
+if(count<slplen)
+{
+  $('.sliderrunner').animate({left:"-=100%"},1500);
+  count=count+1;
+}
+else
+{
+$('.sliderrunner').animate({left:"00%"},1500);
+count=1;
+}
+}
+runner=setInterval(runfun,2000);
+ })
+ 
+</script>
+
+</body>
+</html>
